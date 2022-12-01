@@ -10,8 +10,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(Post $post)//インポートしたPostをインスタンス化して$postとして使⽤。
+    public function home(Post $post)
     {
-        return $post->get();//$postの中⾝を戻り値にする。
+        return view('posts/home')->with(['posts' => $post->get()]);
+        //home内で使う変数'posts'と設定。'posts'の中⾝にgetを使い、インスタンス化した$postを代⼊。
     }
 }
+?>
