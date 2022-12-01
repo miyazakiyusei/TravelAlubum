@@ -15,5 +15,5 @@ class PostController extends Controller
         return view('posts/home')->with(['posts' => $post->get()]);
         //home内で使う変数'posts'と設定。'posts'の中⾝にgetを使い、インスタンス化した$postを代⼊。
     }
-}
+}    
 ?>
